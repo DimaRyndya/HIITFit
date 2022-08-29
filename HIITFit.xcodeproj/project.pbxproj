@@ -12,6 +12,7 @@
 		1D919A1628BB98A9004C5E19 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D919A1528BB98A9004C5E19 /* HeaderView.swift */; };
 		1D919A1828BBC157004C5E19 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D919A1728BBC157004C5E19 /* RatingView.swift */; };
 		1D919A1A28BBC835004C5E19 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D919A1928BBC835004C5E19 /* HistoryView.swift */; };
+		1D919A1C28BCF8BC004C5E19 /* DateFormatterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D919A1B28BCF8BC004C5E19 /* DateFormatterService.swift */; };
 		CD30C924251474DC0049DB93 /* HIITFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30C923251474DC0049DB93 /* HIITFitApp.swift */; };
 		CD30C926251474DC0049DB93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30C925251474DC0049DB93 /* ContentView.swift */; };
 		CD30C928251474DD0049DB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD30C927251474DD0049DB93 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		1D919A1528BB98A9004C5E19 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		1D919A1728BBC157004C5E19 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		1D919A1928BBC835004C5E19 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		1D919A1B28BCF8BC004C5E19 /* DateFormatterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterService.swift; sourceTree = "<group>"; };
 		CD30C920251474DC0049DB93 /* HIITFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIITFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD30C923251474DC0049DB93 /* HIITFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIITFitApp.swift; sourceTree = "<group>"; };
 		CD30C925251474DC0049DB93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1D919A1D28BCFA65004C5E19 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1D919A1B28BCF8BC004C5E19 /* DateFormatterService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CD30C917251474DC0049DB93 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 				CD30C923251474DC0049DB93 /* HIITFitApp.swift */,
 				1D919A1428BB811A004C5E19 /* Views */,
 				CD30C93D25147A8C0049DB93 /* DateExtension.swift */,
+				1D919A1D28BCFA65004C5E19 /* Services */,
 				CD30C93E25147A8C0049DB93 /* ImageExtension.swift */,
 				CD30C927251474DD0049DB93 /* Assets.xcassets */,
 				CD30C94D25147B420049DB93 /* Videos */,
@@ -214,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D919A1C28BCF8BC004C5E19 /* DateFormatterService.swift in Sources */,
 				1D919A1328BB80E6004C5E19 /* ExersiceView.swift in Sources */,
 				1D919A1128BB80C6004C5E19 /* WelcomeView.swift in Sources */,
 				CD30C926251474DC0049DB93 /* ContentView.swift in Sources */,

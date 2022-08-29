@@ -1,26 +1,29 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    var welcomeMainView: some View {
+        HStack(alignment: .bottom) {
+            VStack(alignment: .leading) {
+                Text("Get gift")
+                    .font(.largeTitle)
+                Text("with high intensity interval training")
+                    .font(.headline)
+            }
+            Image("step-up")
+                .resizedToFill(width: 240, height: 240)
+                .clipShape(Circle())
+        }
+    }
     var body: some View {
         ZStack {
             VStack {
                 HeaderView(titleText: "Welcome")
                 Spacer()
                 Button("History") { }
-                    .padding(.bottom)
+                    .padding()
             }
             VStack {
-                HStack(alignment: .bottom) {
-                    VStack(alignment: .leading) {
-                        Text("Get gift")
-                            .font(.largeTitle)
-                        Text("with high intensity interval training")
-                            .font(.headline)
-                    }
-                    Image("step-up")
-                        .resizedToFill(width: 240, height: 240)
-                        .clipShape(Circle())
-                }
+                welcomeMainView
                 Button(action: { }) {
                     Text("Get Stared")
                     Image(systemName: "arrow.right.circle")

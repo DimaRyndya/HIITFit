@@ -2,23 +2,22 @@ import SwiftUI
 import AVKit
 
 struct ExersiceView: View {
-    let videoNames = ["squat", "step-up", "burpee", "sun-salute"]
-    let exerciseNames = ["Squat", "Step Up", "Burpee", "Sun Salute"]
-    let interval: TimeInterval = 30
     let index: Int
+    let viewModel = ExersiceViewModel()
+
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                HeaderView(titleText: exerciseNames[index])
+                HeaderView(titleText: viewModel.exerciseNames[index])
                     .padding(.bottom)
-                if let url = Bundle.main.url(forResource: videoNames[index], withExtension: "mp4") {
+                if let url = Bundle.main.url(forResource: viewModel.videoNames[index], withExtension: "mp4") {
                     VideoPlayer(player: AVPlayer(url: url))
                         .frame(height: geometry.size.height * 0.45)
                 } else {
-                    Text("Couldn’t find \(videoNames[index]).mp4")
+                    Text("Couldn’t find \(viewModel.videoNames[index]).mp4")
                       .foregroundColor(.red)
                 }
-                Text(Date().addingTimeInterval(interval), style: .timer)
+                Text(Date().addingTimeInterval(viewModel.interval), style: .timer)
                     .font(.system(size: 90))
                 Button("Start/Done") { }
                     .font(.title3)
@@ -37,6 +36,14 @@ struct ExersiceView_Previews: PreviewProvider {
     static var previews: some View {
         ExersiceView(index: 0)
     }
+}
+
+struct ExersiceViewModel {
+
+    let videoNames = ["squat", "step-up", "burpee", "sun-salute"]
+    let exerciseNames = ["Squat", "Step Up", "Burpee", "Sun Salute"]
+    let interval: TimeInterval = 30
+
 }
 
 
