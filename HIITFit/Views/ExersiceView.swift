@@ -2,6 +2,12 @@ import SwiftUI
 import AVKit
 
 struct ExersiceView: View {
+    @Binding var selectedTab: Int
+
+    var lastExercise: Bool {
+        index + 1 == Exercise.exercises.count
+    }
+
     let videoNames = ["squat", "step-up", "burpee", "sun-salute"]
     let exerciseNames = ["Squat", "Step Up", "Burpee", "Sun Salute"]
     let interval: TimeInterval = 30
@@ -9,7 +15,7 @@ struct ExersiceView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                HeaderView(titleText: Exercise.exercises[index].exerciseName)
+                HeaderView(selectedTab: $selectedTab, titleText: Exercise.exercises[index].exerciseName)
                     .padding(.bottom)
                 if let url = Bundle.main.url(forResource: Exercise.exercises[index].videoName, withExtension: "mp4") {
                     VideoPlayer(player: AVPlayer(url: url))
@@ -20,11 +26,18 @@ struct ExersiceView: View {
                 }
                 Text(Date().addingTimeInterval(interval), style: .timer)
                     .font(.system(size: 90))
-                Button(NSLocalizedString(
-                        "Start/Done",
-                        comment: "begin exercise / mark as finished")) { }
-                    .font(.title3)
-                    .padding()
+                HStack(spacing: 150) {
+                    Button(NSLocalizedString(
+                            "Start Exercise",
+                            comment: "begin exercise")) { }
+                    Button(NSLocalizedString(
+                            "Done",
+                            comment: "mark as finished")) {
+                        selectedTab = lastExercise ? 9 : selectedTab + 1
+                    }
+                }
+                .font(.title3)
+                .padding()
                 RatingView()
                     .padding()
                 Spacer()
@@ -37,7 +50,7 @@ struct ExersiceView: View {
 
 struct ExersiceView_Previews: PreviewProvider {
     static var previews: some View {
-        ExersiceView(index: 0)
+        ExersiceView(selectedTab: .constant(1), index: 0)
     }
 }
 
