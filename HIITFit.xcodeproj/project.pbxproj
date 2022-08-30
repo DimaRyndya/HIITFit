@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D27687928BE1DA000FCE684 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27687828BE1DA000FCE684 /* Exercise.swift */; };
+		1D27687B28BE287B00FCE684 /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27687A28BE287B00FCE684 /* HistoryStore.swift */; };
+		1D27688328BE4EB100FCE684 /* HistoryStoreDevData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27688228BE4EB100FCE684 /* HistoryStoreDevData.swift */; };
+		1D27688628BE57AB00FCE684 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D27688828BE57AB00FCE684 /* Localizable.strings */; };
+		1D27688A28BE65D300FCE684 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1D27688C28BE65D300FCE684 /* squat.mp4 */; };
 		1D919A1128BB80C6004C5E19 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D919A1028BB80C6004C5E19 /* WelcomeView.swift */; };
 		1D919A1328BB80E6004C5E19 /* ExersiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D919A1228BB80E6004C5E19 /* ExersiceView.swift */; };
 		1D919A1628BB98A9004C5E19 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D919A1528BB98A9004C5E19 /* HeaderView.swift */; };
@@ -21,11 +26,16 @@
 		CD30C94025147A8C0049DB93 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30C93E25147A8C0049DB93 /* ImageExtension.swift */; };
 		CD30C94625147AEF0049DB93 /* step-up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD30C94225147AEF0049DB93 /* step-up.mp4 */; };
 		CD30C94725147AEF0049DB93 /* burpee.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD30C94325147AEF0049DB93 /* burpee.mp4 */; };
-		CD30C94825147AEF0049DB93 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD30C94425147AEF0049DB93 /* squat.mp4 */; };
 		CD30C94925147AEF0049DB93 /* sun-salute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD30C94525147AEF0049DB93 /* sun-salute.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D27687828BE1DA000FCE684 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		1D27687A28BE287B00FCE684 /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
+		1D27688228BE4EB100FCE684 /* HistoryStoreDevData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreDevData.swift; sourceTree = "<group>"; };
+		1D27688728BE57AB00FCE684 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1D27688928BE648900FCE684 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1D27688B28BE65D300FCE684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/squat.mp4; sourceTree = "<group>"; };
 		1D919A1028BB80C6004C5E19 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		1D919A1228BB80E6004C5E19 /* ExersiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExersiceView.swift; sourceTree = "<group>"; };
 		1D919A1528BB98A9004C5E19 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -42,7 +52,6 @@
 		CD30C93E25147A8C0049DB93 /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		CD30C94225147AEF0049DB93 /* step-up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "step-up.mp4"; sourceTree = "<group>"; };
 		CD30C94325147AEF0049DB93 /* burpee.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = burpee.mp4; sourceTree = "<group>"; };
-		CD30C94425147AEF0049DB93 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = squat.mp4; sourceTree = "<group>"; };
 		CD30C94525147AEF0049DB93 /* sun-salute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sun-salute.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D27687C28BE288900FCE684 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D27687828BE1DA000FCE684 /* Exercise.swift */,
+				1D27687A28BE287B00FCE684 /* HistoryStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1D919A1428BB811A004C5E19 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,9 +109,11 @@
 			isa = PBXGroup;
 			children = (
 				CD30C923251474DC0049DB93 /* HIITFitApp.swift */,
+				1D27688828BE57AB00FCE684 /* Localizable.strings */,
 				1D919A1428BB811A004C5E19 /* Views */,
-				CD30C93D25147A8C0049DB93 /* DateExtension.swift */,
+				1D27687C28BE288900FCE684 /* Model */,
 				CD30C93E25147A8C0049DB93 /* ImageExtension.swift */,
+				CD30C93D25147A8C0049DB93 /* DateExtension.swift */,
 				CD30C927251474DD0049DB93 /* Assets.xcassets */,
 				CD30C94D25147B420049DB93 /* Videos */,
 				CD30C92C251474DD0049DB93 /* Info.plist */,
@@ -106,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				CD30C92A251474DD0049DB93 /* Preview Assets.xcassets */,
+				1D27688228BE4EB100FCE684 /* HistoryStoreDevData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -114,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				CD30C94325147AEF0049DB93 /* burpee.mp4 */,
-				CD30C94425147AEF0049DB93 /* squat.mp4 */,
+				1D27688C28BE65D300FCE684 /* squat.mp4 */,
 				CD30C94225147AEF0049DB93 /* step-up.mp4 */,
 				CD30C94525147AEF0049DB93 /* sun-salute.mp4 */,
 			);
@@ -148,6 +169,7 @@
 		CD30C918251474DC0049DB93 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = NO;
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Ray Wenderlich";
@@ -164,6 +186,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = CD30C917251474DC0049DB93;
 			productRefGroup = CD30C921251474DC0049DB93 /* Products */;
@@ -180,9 +203,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD30C94825147AEF0049DB93 /* squat.mp4 in Resources */,
+				1D27688A28BE65D300FCE684 /* squat.mp4 in Resources */,
 				CD30C94725147AEF0049DB93 /* burpee.mp4 in Resources */,
 				CD30C92B251474DD0049DB93 /* Preview Assets.xcassets in Resources */,
+				1D27688628BE57AB00FCE684 /* Localizable.strings in Resources */,
 				CD30C928251474DD0049DB93 /* Assets.xcassets in Resources */,
 				CD30C94925147AEF0049DB93 /* sun-salute.mp4 in Resources */,
 				CD30C94625147AEF0049DB93 /* step-up.mp4 in Resources */,
@@ -221,8 +245,11 @@
 				1D919A1128BB80C6004C5E19 /* WelcomeView.swift in Sources */,
 				1D919A1F28BD02EB004C5E19 /* SuccessView.swift in Sources */,
 				CD30C926251474DC0049DB93 /* ContentView.swift in Sources */,
+				1D27687B28BE287B00FCE684 /* HistoryStore.swift in Sources */,
+				1D27688328BE4EB100FCE684 /* HistoryStoreDevData.swift in Sources */,
 				1D919A1828BBC157004C5E19 /* RatingView.swift in Sources */,
 				CD30C93F25147A8C0049DB93 /* DateExtension.swift in Sources */,
+				1D27687928BE1DA000FCE684 /* Exercise.swift in Sources */,
 				CD30C924251474DC0049DB93 /* HIITFitApp.swift in Sources */,
 				CD30C94025147A8C0049DB93 /* ImageExtension.swift in Sources */,
 				1D919A1A28BBC835004C5E19 /* HistoryView.swift in Sources */,
@@ -232,11 +259,32 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		1D27688828BE57AB00FCE684 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D27688728BE57AB00FCE684 /* en */,
+				1D27688928BE648900FCE684 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		1D27688C28BE65D300FCE684 /* squat.mp4 */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D27688B28BE65D300FCE684 /* Base */,
+			);
+			name = squat.mp4;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		CD30C92D251474DD0049DB93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -298,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
