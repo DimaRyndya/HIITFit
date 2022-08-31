@@ -12,6 +12,9 @@ struct HeaderView: View {
                 ForEach(0 ..< Exercise.exercises.count) { index in
                     let fill = index == selectedTab ? ".fill" : ""
                     Image(systemName: "\(index + 1).circle\(fill)")
+                        .onTapGesture {
+                            selectedTab = index
+                        }
                 }
             }
             .font(.title2)

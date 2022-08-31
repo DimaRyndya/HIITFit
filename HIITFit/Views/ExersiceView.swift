@@ -4,14 +4,12 @@ import AVKit
 struct ExersiceView: View {
     @Binding var selectedTab: Int
 
+    let interval: TimeInterval = 30
+    let index: Int
+
     var lastExercise: Bool {
         index + 1 == Exercise.exercises.count
     }
-
-    let videoNames = ["squat", "step-up", "burpee", "sun-salute"]
-    let exerciseNames = ["Squat", "Step Up", "Burpee", "Sun Salute"]
-    let interval: TimeInterval = 30
-    let index: Int
     var body: some View {
         GeometryReader { geometry in
             VStack {
