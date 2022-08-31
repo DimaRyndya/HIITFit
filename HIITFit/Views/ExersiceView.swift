@@ -8,6 +8,7 @@ struct ExersiceView: View {
     @State private var showSuccess = false
     @State private var timerDone = false
     @State private var showTimer = false
+    @EnvironmentObject var history: HistoryStore
 
 
     let index: Int
@@ -36,6 +37,7 @@ struct ExersiceView: View {
                     Button(NSLocalizedString(
                             "Done",
                             comment: "mark as finished")) {
+                        history.addDoneExercise(Exercise.exercises[index].exerciseName)
 
                         timerDone = false
                         showTimer.toggle()
@@ -73,7 +75,8 @@ struct ExersiceView: View {
 
 struct ExersiceView_Previews: PreviewProvider {
     static var previews: some View {
-        ExersiceView(selectedTab: .constant(3), index: 3)
+        ExersiceView(selectedTab: .constant(0), index: 0)
+            .environmentObject(HistoryStore())
     }
 }
 
