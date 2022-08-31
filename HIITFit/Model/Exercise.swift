@@ -41,3 +41,5 @@ extension Exercise {
             videoName: "sun-salute")
     ]
 }
+
+

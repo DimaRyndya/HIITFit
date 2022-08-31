@@ -36,7 +36,7 @@ import SwiftUI
 struct HIITFitApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+        ContentView()
     }
   }
 }

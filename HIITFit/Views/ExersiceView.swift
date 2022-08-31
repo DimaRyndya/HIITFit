@@ -2,9 +2,14 @@ import SwiftUI
 import AVKit
 
 struct ExersiceView: View {
+    @State private var rating = 0
     @Binding var selectedTab: Int
+    @State private var showHistory = false
+    @State private var showSuccess = false
+    @State private var timerDone = false
+    @State private var showTimer = false
 
-    let interval: TimeInterval = 30
+
     let index: Int
 
     var lastExercise: Bool {
@@ -20,27 +25,47 @@ struct ExersiceView: View {
                         .frame(height: geometry.size.height * 0.45)
                 } else {
                     Text("Couldn’t find \(Exercise.exercises[index].videoName).mp4")
-                      .foregroundColor(.red)
+                        .foregroundColor(.red)
                 }
-                Text(Date().addingTimeInterval(interval), style: .timer)
-                    .font(.system(size: 90))
                 HStack(spacing: 150) {
                     Button(NSLocalizedString(
                             "Start Exercise",
-                            comment: "begin exercise")) { }
+                            comment: "begin exercise")) {
+                        showTimer.toggle()
+                    }
                     Button(NSLocalizedString(
                             "Done",
                             comment: "mark as finished")) {
-                        selectedTab = lastExercise ? 9 : selectedTab + 1
+
+                        timerDone = false
+                        showTimer.toggle()
+
+                        if lastExercise {
+                            showSuccess.toggle()
+                        } else {
+                            selectedTab += 1
+                        }
+                    }
+                    .disabled(!timerDone)
+                    .sheet(isPresented: $showSuccess) {
+                        SuccessView(selectedTab: $selectedTab)
                     }
                 }
                 .font(.title3)
                 .padding()
-                RatingView()
-                    .padding()
+                if showTimer {
+                    TimerView(timerDone: $timerDone)
+                }
                 Spacer()
-                Button("History") { }
-                    .padding(.bottom)
+                RatingView(rating: $rating)
+                    .padding()
+                Button("History") {
+                    showHistory.toggle()
+                }
+                .sheet(isPresented: $showHistory) {
+                    HistoryView(showHistory: $showHistory)
+                }
+                .padding(.bottom)
             }
         }
     }
@@ -48,7 +73,7 @@ struct ExersiceView: View {
 
 struct ExersiceView_Previews: PreviewProvider {
     static var previews: some View {
-        ExersiceView(selectedTab: .constant(1), index: 0)
+        ExersiceView(selectedTab: .constant(3), index: 3)
     }
 }
 
