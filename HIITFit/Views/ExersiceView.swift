@@ -2,7 +2,6 @@ import SwiftUI
 import AVKit
 
 struct ExersiceView: View {
-    @State private var rating = 0
     @Binding var selectedTab: Int
     @State private var showHistory = false
     @State private var showSuccess = false
@@ -59,7 +58,7 @@ struct ExersiceView: View {
                     TimerView(timerDone: $timerDone)
                 }
                 Spacer()
-                RatingView(rating: $rating)
+                RatingView(exerciseIndex: index)
                     .padding()
                 Button("History") {
                     showHistory.toggle()
