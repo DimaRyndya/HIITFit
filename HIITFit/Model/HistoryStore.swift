@@ -10,9 +10,7 @@ class HistoryStore: ObservableObject {
     @Published var exerciseDays: [ExerciseDay] = []
 
     init(withChecking: Bool) throws {
-        //        #if DEBUG
-        //        createDevData()
-        //        #endif
+
         do {
             try load()
         } catch {
@@ -47,7 +45,6 @@ class HistoryStore: ObservableObject {
         }
 
         do {
-
             guard let data = try? Data(contentsOf: dataURL) else {
                 return
             }

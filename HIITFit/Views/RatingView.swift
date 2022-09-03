@@ -21,19 +21,23 @@ struct RatingView: View {
     var body: some View {
         HStack {
             ForEach(1 ..< maximumRating + 1) { index in
-                Image(systemName: "waveform.path.ecg")
-                    .foregroundColor(
-                        index > rating ? offColor : onColor
-                    )
-                    .onTapGesture {
-                        updateRating(index: index)
-                    }
-                    .onAppear {
-                        convertRating()
-                    }
-                    .onChange(of: rating) { _ in
-                        convertRating()
-                    }
+                Button(action: {
+                    updateRating(index: index)
+
+                }, label: {
+                    Image(systemName: "waveform.path.ecg")
+                        .foregroundColor(
+                            index > rating ? offColor : onColor
+                        )
+                        .font(.body)
+                })
+                .buttonStyle(EmbossedButtonStyle(buttonShape: .round))
+                .onAppear {
+                    convertRating()
+                }
+                .onChange(of: rating) { _ in
+                    convertRating()
+                }
             }
             .font(.largeTitle)
         }
